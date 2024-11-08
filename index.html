@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Magical Desserts - Sobremesas Fofas</title>
+</head>
+<body>
+
+<header>
+    <h1> Magical Desserts!</h1>
+    <div class="header-icons">
+        <a href="#" class="icon" id="menu-toggle"><i class="fas fa-bars"></i></a>
+        <a href="#" class="icon"><i class="fas fa-search"></i></a>
+        <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+</header>
+
+<div class="side-menu" id="side-menu">
+    <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#receitas">Receitas</a></li>
+        <li><a href="#curso">Curso</a></li>
+        <li><a href="#contato">Contatos</a></li>
+    </ul>
+</div>
+
+<section class="carrossel-container">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/Bunny cupcakes.jpg" alt="Cupcake Decorado">
+                <p>Cupcake de baunilha decorado com um coelhinho de fondant.</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/download (4).jpg" alt="Cupcake Decorado">
+                <p>Bolo de Morango</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/download (5).jpg" alt="Mousse de Chocolate">
+                <p>Donuts Decorado</p>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+<section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Bem-vindo ao Magical Desserts, onde as sobremesas são feitas com amor e carinho. Encontre receitas encantadoras e adoce sua vida!</p>
+</section>
+
+<section id="receitas">
+    <h2>Receitas Famosas</h2>
+    <div class="receita">
+        <img src="img/𝐩𝐢𝐧𝐭𝐞𝐫𝐞𝐬𝐭_ @𝐤𝐲𝐮𝐦𝐝𝐢𝐬.jpg" alt="Torta de Morango">
+        <div class="descricao">
+            <h3>Torta de Morango</h3>
+            <p>Deliciosa e refrescante, com morangos frescos e chantilly.</p>
+        </div>
+    </div>
+    <div class="receita">
+        <img src="img/Chocolate Mousse Recipe - Cooking Classy.jpg" alt="Mousse de Chocolate">
+        <div class="descricao">
+            <h3>Mousse de Chocolate</h3>
+            <p>Cremosa e irresistível, feita com chocolate amargo.</p>
+        </div>
+    </div>
+    <div class="receita">
+        <img src="img/pinterest _ jaescafe.jpg" alt="Bolo de Cenoura">
+        <div class="descricao">
+            <h3>Bolo de Cenoura</h3>
+            <p>Um clássico, com cobertura de chocolate branco.</p>
+        </div>
+    </div>
+</section>
+
+<section id="curso">
+    <h2>Curso de Culinária </h2>
+    <p>Quer aprender a criar sobremesas fofas e deliciosas? Inscreva-se no nosso curso de culinária e torne-se um expert na arte das sobremesas criativas!</p>
+    <a href="#" class="cta-button">Inscreva-se Agora!</a>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato conosco pelo e-mail: <a href="mailto:contato@magicaldesserts.com">contato@magicaldesserts.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Magical Desserts. Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const sideMenu = document.getElementById('side-menu');
+    menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (sideMenu.style.left === '0px') {
+            sideMenu.style.left = '-250px';
+        } else {
+            sideMenu.style.left = '0px';
+        }
+    });
+</script>
+
+</body>
+</html>

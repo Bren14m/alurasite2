@@ -1,0 +1,210 @@
+/* Estilos globais */
+body {
+    font-family: 'Dancing Script', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF8E1;
+    color: #333;
+    font-size: 16px; /* Tamanho base da fonte */
+}
+
+header {
+    background-color: #ffcccb;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #d84b3a;
+}
+
+.header-icons {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.icon {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #d84b3a;
+}
+
+/* Menu lateral */
+.side-menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 15px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.side-menu ul li a:hover {
+    background-color: #d84b3a;
+    color: white;
+}
+
+/* Carrossel */
+.carrossel-container {
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.swiper-slide img {
+    width: 60%; /* Ajuste para tablets */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.05);
+}
+
+.swiper-slide p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Receitas */
+#receitas {
+    text-align: left;
+    padding: 40px;
+    background-color: #faf9f9;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colunas para tablets */
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    #receitas {
+        display: block; /* Exibe as receitas em uma coluna para mobile */
+        padding: 20px;
+    }
+
+    .receita {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .receita img {
+        width: 100%;
+        max-width: 200px; /* Limita o tamanho das imagens */
+        margin: 0 auto;
+    }
+}
+
+/* Botão CTA */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #d84b3a;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background-color: #ff9a8b;
+    transform: scale(1.05);
+}
+
+.cta-button:active {
+    background-color: #c44f34; /* Cor de fundo quando o botão é pressionado */
+}
+
+/* Media Queries para responsividade */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .side-menu {
+        position: static;
+        width: auto;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .side-menu ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .side-menu ul li {
+        padding: 10px 20px;
+    }
+
+    .swiper-slide img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .header-icons .icon {
+        font-size: 20px;
+    }
+
+    .swiper-slide img {
+        width: 70%;
+    }
+
+    .receita img {
+        max-width: 150px;
+    }
+}
